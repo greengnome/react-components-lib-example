@@ -9,12 +9,14 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "autoprefixer": "^9.8.6",
     "react-scripts": "4.0.3",
+    "rollup-plugin-postcss": "^4.0.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "build": "rollup -c",
-    "build-watch": "rollup -c -w", 
+    "build-watch": "rollup -c -w",
     "start-playground": "cd playground && npm run start",
     "i-all": "npm i && cd playground && npm i",
     "dev": "npm-run-all --parallel build-watch start-playground"
