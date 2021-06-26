@@ -1,2 +1,2 @@
-export { default as Greeting } from './components/Greeting';
-export { default as Loading } from './components/Loading';
+export { default as Greeting } from './components/Greeting/index.jsx';
+export { default as Loading } from './components/Loading/index.jsx';
