@@ -1,6 +1,8 @@
 import babel from '@rollup/plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
+import autoprefixer from 'autoprefixer';
+import postcss from 'rollup-plugin-postcss';
 import pkg from './package.json';
 
 const prodConfig = {
@@ -13,6 +15,11 @@ const prodConfig = {
     external(),
     babel({
       exclude: 'node_modules/**',
+    }),
+    postcss({
+      plugins: [autoprefixer()],
+      extract: true,
+      modules: true,
     }),
     del({ targets: ['dist/*'] }),
   ],
