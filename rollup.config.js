@@ -18,7 +18,6 @@ const prodConfig = {
     }),
     postcss({
       plugins: [autoprefixer()],
-      extract: true,
       modules: true,
     }),
     del({ targets: ['dist/*'] }),
